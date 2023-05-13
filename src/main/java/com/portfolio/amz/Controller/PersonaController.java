@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
+
 public class PersonaController {
     @Autowired IPersonaService iPersonaService;
 
@@ -16,7 +18,7 @@ public class PersonaController {
         return iPersonaService.getPersona();
     }
 
-    @PostMapping (value = "personas/crear")
+    @PostMapping (value = "/personas/crear")
     public String createPersona(@RequestBody Persona persona) {
         iPersonaService.savePersona(persona);
         return "Persona creada correctamente" ;
@@ -45,4 +47,9 @@ public class PersonaController {
         return persona ;
     }
 
+    @GetMapping ("/personas/traer/perfil")
+    public Persona findPersona(){
+        return iPersonaService.findPersona( (long) 1);
+    }
+    
 }
