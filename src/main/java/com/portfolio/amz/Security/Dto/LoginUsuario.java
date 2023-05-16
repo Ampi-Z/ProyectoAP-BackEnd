@@ -4,9 +4,12 @@ package com.portfolio.amz.Security.Dto;
 import jakarta.validation.constraints.NotBlank;
 
 public class LoginUsuario {
-
     @NotBlank
-    private String nombreUsuario ;
+    private String nombreUsuario;
+    @NotBlank
+    private String password;
+    
+    //Getters & Setters
 
     public String getNombreUsuario() {
         return nombreUsuario;
@@ -24,7 +27,4 @@ public class LoginUsuario {
         this.password = password;
     }
     
-    @NotBlank
-    private String password ;
-
 }

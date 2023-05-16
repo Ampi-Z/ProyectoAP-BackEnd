@@ -3,16 +3,18 @@ package com.portfolio.amz.Security.Controller;
 
 
 public class Mensaje {
-
-    private String mensaje ;
+    private String mensaje;
     
+    //Constructores
+
     public Mensaje() {
     }
-    
+
     public Mensaje(String mensaje) {
-        this.mensaje = mensaje ;
+        this.mensaje = mensaje;
     }
 
+    //Getters && Setters
     public String getMensaje() {
         return mensaje;
     }
@@ -20,5 +22,6 @@ public class Mensaje {
     public void setMensaje(String mensaje) {
         this.mensaje = mensaje;
     }
+    
     
 }

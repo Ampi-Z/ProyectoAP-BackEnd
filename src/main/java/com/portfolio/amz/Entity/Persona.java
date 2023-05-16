@@ -10,24 +10,26 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Getter @Setter
 @Entity
 public class Persona {
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     
     @NotNull
-    @Size(min = 1 , max = 50, message = "Nombre debe tener entre 1 y 50 caracteres")
+    @Size(min = 1, max = 70, message = "No cumple con la longitud")
     private String nombre;
     
     @NotNull
-    @Size(min = 1 , max = 50, message = "Apellido debe tener entre 1 y 50 caracteres")
+    @Size(min = 1, max = 70, message = "No cumple con la longitud")
     private String apellido;
 
-    @Size(min = 1 , max = 50 , message = "longitud invalida")
+    @Size(min = 1, max = 200, message = "No cumple con la longitud")
     private String img;
-
+    
+    @NotNull
+    private String descripcion;
+    
+   
 }

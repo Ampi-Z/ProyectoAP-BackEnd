@@ -1,7 +1,6 @@
 
 package com.portfolio.amz.Security;
 
-
 import com.portfolio.amz.Security.jwt.JwtEntryPoint;
 import com.portfolio.amz.Security.jwt.JwtTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
